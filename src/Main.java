@@ -10,36 +10,23 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int result = add(3 , 8);
-        System.out.println(result);
+        System.out.println(Main.add(5,7));
 
-        int addFour = addTwo(3 , 8, 4, 9);
-        System.out.println(addFour);
+        System.out.println(Main.addTwo(5,7, 6, 6));
 
-        String morningGreetingsResults = morningGreetings("Kaden");
-        System.out.println(morningGreetingsResults);
+        System.out.println(Main.morningGreeting("Toby Fox"));
 
-        String afternoonGreetingResults = afternoonGreetings("Kaden");
-        System.out.println(afternoonGreetingResults);
+        System.out.println(Main.afternoonGreeting("Mac Miller"));
 
-        String tripletResults = triplets("ohhhbaby");
-        System.out.println(tripletResults);
+        System.out.println(Main.triple("oohbaby"));
 
-        double halvesResult = halves(6);
-        System.out.println(halvesResult);
+        System.out.println(Main.half(19));
 
-        double roundedPositive1 = round1(8.5);
-        System.out.println(roundedPositive1);
+        System.out.println( Main.roundPositiveValueToNearestInteger(8.5));
+        System.out.println(Main.roundPositiveValueToNearestInteger(8.49));
 
-        double roundedPositive2 = round2(8.49);
-        System.out.println(roundedPositive2);
-
-        double roundnegative1 = round4(-8.49);
-        System.out.println(roundnegative1);
-
-        double roundnegative2 = round3(-8.51);
-        System.out.println(roundnegative2);
-
+        System.out.println( Main.roundNegativeValueToNearestInteger(-8.49));
+        System.out.println(Main.roundNegativeValueToNearestInteger(-8.5));
     }
 
     // 1. add
@@ -53,34 +40,29 @@ public class Main {
     }
 
     // 3. morningGreeting
-    public static String morningGreetings(String name){
+    public static String morningGreeting(String name){
         return "早上好, " + name + "!";
     }
     // 4. afternoonGreeting
-    public static String afternoonGreetings(String name){
+    public static String afternoonGreeting(String name){
         return "下午好， " + name + "!";
     }
     // 5. triple
-    public static String triplets(String name){
+    public static String triple(String name){
         return name+name+name;
     }
 
     // 6. half
-    public static double halves(int a){
+    public static double half(int a){
         return a/2.0;
     }
     // 7. roundPositiveValueToNearestInteger
-    public static double round1(double a){
+    public static double roundPositiveValueToNearestInteger(double a){
         return (int) Math.round(a);
     }
-    public static double round2(double b) {
-        return (int) Math.round(b);
-    }
+
     // 8. roundNegativeValueToNearestInteger
-    public static double round3(double c){
-        return (int) Math.round(c);
-    }
-    public static double round4(double d) {
-        return (int) Math.round(d);
+    public static double roundNegativeValueToNearestInteger(double b) {
+        return (int) Math.round(b-1);
     }
 }
